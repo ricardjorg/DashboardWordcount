@@ -1,8 +1,10 @@
 # Dashboard Wordcount WordPress Plugin
-A WordPress plugin that updates the Dashboard's At a Glance widget to show the total word count of all the published posts and age of the current WordPress website.
+A WordPress plugin that updates the Dashboard's At a Glance widget to show the total word count of all the published posts and age of your WordPress website.
+
+![WordPress Dashboard Wordcount Screenshot](/assets/screenshot-1.png?raw=true "WordPress Dashboard Wordcount Screenshot")
 
 ## What does this plugin do?
-Updates the Dashboard's At a Glance widget to show the total word count of all the published posts in this Wordpress website (and average word count per post). Also shows the age of the website (time since the oldest post). Uses the default dashboard icons and styling, so it's completely seamless. Just more information for you.
+Updates the dashboard's *At a Glance* widget to show the total word count of all the published posts in your WordPress website (and average word count per post). Also shows the age of the website (time since the oldest post). Uses the default dashboard icons and styling, so it's completely seamless. Just more information for you.
 
 ## Changelog
 * 0.5 Fixed the visitor's comments calculation (it was wrong because of the number formats, ironically)
