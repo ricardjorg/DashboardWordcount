@@ -3,10 +3,11 @@
  * Plugin Name: Dashboard Wordcount
  * Plugin URI: http://wordpress.org/support/view/plugin-reviews/dashboard-wordcount
  * Description: Updates the Dashboard's At a Glance widget to show the total word count of all the published posts in this Wordpress website (and average word count per post). Also shows the age of the website (time since the oldest post). Uses the default dashboard icons and styling, so it's completely seamless. Just more information for you.
- * Version: 0.5
+ * Version: 0.6
  * Author: Ricardo Jorge
  * Author URI: http://www.ricardojorge.net/
  * License: GPL2
+ Text Domain: post-word-count-languages
  */
  
 /*  Copyright 2014 Ricardo Jorge Pinto  (email : ricardjorg@gmail.com)
@@ -25,6 +26,11 @@
     Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
+	add_action( 'admin_init', 'post_word_count_load_language' );
+	function post_word_count_load_language() {
+		load_plugin_textdomain( 'post-word-count-languages', false,  dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
+	}
+
 	function post_word_count() {
 		$count = 0;
 		$posts = get_posts( array(
@@ -36,12 +42,12 @@
 		}
 		$num =  number_format_i18n( $count );
 		// This block will add your word count to the stats portion of the Right Now box
-		$text = _n( 'Word', 'Words', $num );
+		$text = _n( __('Words', 'post-word-count-languages'), __('Words', 'post-word-count-languages'), $num );
 		$average = $count;
 		$average /= count($posts);
 		$average = number_format_i18n( $average );
 		$url = admin_url( 'edit.php' );
-		echo "<style scoped>.word-count a:before { content:'\\f122' !important; }</style><li class='word-count'><a href='{$url}' title='Average of {$average} words per post'>{$num} {$text}</a></li>";
+		echo "<style scoped>.word-count a:before { content:'\\f122' !important; }</style><li class='word-count'><a href='{$url}' title='" . __('Average of','post-word-count-languages') . " {$average} " . __('words per post','post-word-count-languages') . "'>{$num} {$text}</a></li>";
 	}
 
 	// add to Content Stats table
@@ -52,7 +58,7 @@
 		$diff = dbwc_first_post_date_diff();
 
 		$url = admin_url( 'edit.php' );
-		echo "<style scoped>.year-count a:before {content:'\\f118' !important;}</style><li class='year-count' ><a href='{$url}' title='Since {$oldest}'>{$diff}</a></li>";
+		echo "<style scoped>.year-count a:before {content:'\\f118' !important;}</style><li class='year-count' ><a href='{$url}' title='" . __('Since','post-word-count-languages') . " {$oldest}'>{$diff}</a></li>";
 	}
 
 	// add to Content Stats table
@@ -65,7 +71,7 @@
 		$current = number_format_i18n( $current );
 		$total = number_format_i18n( $total );
 		$url = admin_url( 'edit-comments.php' );
-		echo "<style scoped>.comment-word-count a:before { content:'\\f473' !important; }</style><li class='comment-word-count'><a href='{$url}' title='{$current} words in comments written by you and {$others} words in comments by other users'>{$total} words in comments</a></li>";
+		echo "<style scoped>.comment-word-count a:before { content:'\\f473' !important; }</style><li class='comment-word-count'><a href='{$url}' title='{$current} " . __('words in comments written by you and','post-word-count-languages') . " {$others} " . __('words in comments by other users','post-word-count-languages') . "'>{$total} " . __('words in comments','post-word-count-languages') . "</a></li>";
 	}
 
 	// add to Content Stats table
