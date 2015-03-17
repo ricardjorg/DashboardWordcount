@@ -7,6 +7,7 @@ A WordPress plugin that updates the Dashboard's At a Glance widget to show the t
 Updates the dashboard's *At a Glance* widget to show the total word count of all the published posts in your WordPress website (and average word count per post). Also shows the age of the website (time since the oldest post). Uses the default dashboard icons and styling, so it's completely seamless. Just more information for you.
 
 ## Changelog
+* 0.6 Apasionados added support for plugin translations. He also added translation to Spanish
 * 0.5 Fixed the visitor's comments calculation (it was wrong because of the number formats, ironically)
 * 0.4 Changed the number formats, for readability
 * 0.3 Added the comments' word count by request of www.wanderingwil.com
