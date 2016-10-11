@@ -1,0 +1,48 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: 2015-03-08 10:17+0100\n"
+"PO-Revision-Date: 2015-03-08 13:46+0100\n"
+"Last-Translator: Ramon <marketing@apasionados.es>\n"
+"Language-Team: \n"
+"Language: es_ES\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.7.4\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../dashboard-wordcount.php:46
+msgid "Word"
+msgstr "Palabra"
+
+#: ../dashboard-wordcount.php:47
+msgid "Words"
+msgstr "Palabras"
+
+#: ../dashboard-wordcount.php:53
+msgid "Average of"
+msgstr "Una media de"
+
+#: ../dashboard-wordcount.php:53
+msgid "words per post"
+msgstr "palabras por publicación"
+
+#: ../dashboard-wordcount.php:64
+msgid "Since"
+msgstr "Desde"
+
+#: ../dashboard-wordcount.php:77
+msgid "words in comments written by you and"
+msgstr "palabras en comentarios escritas por ti y"
+
+#: ../dashboard-wordcount.php:77
+msgid "words in comments by other users"
+msgstr "palabras en comentarios escritos por otros usuarios"
+
+#: ../dashboard-wordcount.php:77
+msgid "words in comments"
+msgstr "palabras en comentarios"
